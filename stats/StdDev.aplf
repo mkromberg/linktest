@@ -1,0 +1,1 @@
+ StdDev←{2 Root(+.×⍨÷⍴),⍵-Mean ⍵}

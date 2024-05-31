@@ -1,0 +1,4 @@
+ mean←Mean vals;sum
+ ⍝ Morten was here
+ sum←+⌿,vals ⍝
+ mean←sum÷1⌈⍴,vals

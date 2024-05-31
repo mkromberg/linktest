@@ -1,0 +1,11 @@
+ Main;data;ST
+⍝ Compute Mean and StdDev until user inputs an empty array!
+
+ ST←#.stats
+ :Repeat
+     ⎕←'Enter some numbers:'
+     :If 0≠⍴data←⎕
+         ⎕←'Mean:   ',1⍕ST.Mean data
+         ⎕←'StdDev: ',1⍕ST.StdDev data
+     :EndIf
+ :Until 0=≢data

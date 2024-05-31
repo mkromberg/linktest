@@ -1,0 +1,21 @@
+ nsh n;deep;flat;dd;fd
+⍝ demonstrate namespace hierachy issues
+
+ deep←⎕NS''
+ deep.n←n
+ deep.(data←⎕NS¨n⍴⊂'')     ⍝ children of "deep"
+ deep.data.(record←⎕NS'') ⍝ childen of deep.data
+ deep.data.record.number←⍳n
+
+ flat←⎕NS''
+ flat.data←⎕NS¨n⍴⊂''       ⍝ children of #
+ flat.data.record←⎕NS¨n⍴⊂'' ⍝ children of #
+ flat.data.record.number←⍳n
+
+ dd←deep.data
+ fd←flat.data
+
+ cmpx'dd.record.number' 'fd.record.number'
+ ⎕EX'deep' 'flat'
+ ⎕←' '
+ cmpx'dd.record.number' 'fd.record.number'
