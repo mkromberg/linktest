@@ -1,5 +1,5 @@
  writelotsafiles;z;folder;i;n
- folder←'subfolder\',⍨⊃⎕NPARTS 4⊃5179⌶⊃⎕SI
+ folder←'lotsafiles\',⍨⊃⎕NPARTS 4⊃5179⌶⊃⎕SI
 
  :For i :In ⍳100
      n←,'ZI4'⎕FMT i
